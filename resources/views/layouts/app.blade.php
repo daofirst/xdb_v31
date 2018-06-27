@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSPINIA - @yield('title') </title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     <link rel="stylesheet" href="{!! asset('css/vendor.css') !!}" />
@@ -12,30 +13,35 @@
 </head>
 <body>
 
-  <!-- Wrapper-->
-    <div id="wrapper">
+  <div id="app">
 
-        <!-- Navigation -->
-        @include('layouts.navigation')
+      <!-- Wrapper-->
+      <div id="wrapper">
 
-        <!-- Page wraper -->
-        <div id="page-wrapper" class="gray-bg">
+          <!-- Navigation -->
+      @include('layouts.navigation')
 
-            <!-- Page wrapper -->
-            @include('layouts.topnavbar')
+      <!-- Page wraper -->
+          <div id="page-wrapper" class="gray-bg">
 
-            <!-- Main view  -->
-            @yield('content')
+              <!-- Page wrapper -->
+          @include('layouts.topnavbar')
 
-            <!-- Footer -->
-            @include('layouts.footer')
+          <!-- Main view  -->
+          @yield('content')
 
-        </div>
-        <!-- End page wrapper-->
+          <!-- Footer -->
+              @include('layouts.footer')
 
-    </div>
-    <!-- End wrapper-->
+          </div>
+          <!-- End page wrapper-->
 
+      </div>
+      <!-- End wrapper-->
+
+  </div>
+
+<script src="{!! asset('js/vendor.js') !!}" type="text/javascript"></script>
 <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
 
 @section('scripts')

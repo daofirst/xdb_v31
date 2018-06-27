@@ -1,8 +1,7 @@
+/* 改变主题色变量 */
+$--color-primary: #1ab394;
 
-// Body
-$body-bg: #f5f8fa;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+@import "~element-ui/packages/theme-chalk/src/index";
