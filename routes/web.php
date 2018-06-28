@@ -23,9 +23,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::get('/test/auth/callback', function (\Illuminate\Http\Request $request){
-    if ($request->get('code')) {
-        return 'Login Success';
-    } else {
-        return 'Access Denied';
-    }
+
+    echo 1;
 });
